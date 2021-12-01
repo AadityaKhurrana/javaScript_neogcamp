@@ -25,12 +25,12 @@ btn_trans.addEventListener('click',function print(){
     //console.log(txt.innerText);
 
     //fetch url
+    output.innerText="Translated :"
     fetch(constructUrl(data))
     .then(response=>response.json())
     .then(json=>{
         var tranlate_text=json.contents.translated;
         output.innerText=tranlate_text;
     });
-
 
 })
